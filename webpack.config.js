@@ -13,8 +13,7 @@ var entries = {
   viewer: ["./extension/src/viewer.js"],
   "viewer-alert": ["./extension/styles/viewer-alert.scss"],
   options: ["./extension/src/options.js"],
-  backend: ["./extension/src/backend.js"],
-  omnibox: ["./extension/src/omnibox.js"],
+  background: ["./extension/src/backend.js", "./extension/src/omnibox.js"],
   "omnibox-page": ["./extension/src/omnibox-page.js"]
 };
 
