@@ -47,14 +47,18 @@ module.exports = {
           }
         }
 
-        var options = optionsStr ? JSON.parse(optionsStr) : {};
-        options.theme = options.theme || defaults.theme;
-        options.optionsTheme = options.optionsTheme || defaults.optionsTheme || "dark";
-        options.addons = options.addons ? JSON.parse(options.addons) : {};
-        options.addons = merge({}, defaults.addons, options.addons)
-        options.structure = options.structure ? JSON.parse(options.structure) : defaults.structure;
-        options.style = options.style && options.style.length > 0 ? options.style : defaults.style;
-        resolve(options);
+        try {
+          var options = optionsStr ? JSON.parse(optionsStr) : {};
+          options.theme = options.theme || defaults.theme;
+          options.optionsTheme = options.optionsTheme || defaults.optionsTheme || "dark";
+          options.addons = options.addons ? JSON.parse(options.addons) : {};
+          options.addons = merge({}, defaults.addons, options.addons);
+          options.structure = options.structure ? JSON.parse(options.structure) : defaults.structure;
+          options.style = options.style && options.style.length > 0 ? options.style : defaults.style;
+          resolve(options);
+        } catch (err) {
+          reject(err);
+        }
       });
     });
   },

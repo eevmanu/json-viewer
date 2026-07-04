@@ -23,6 +23,7 @@
     "webpack": "1.15.x"
   },
   "scripts": {
+    "test": "node --test tests/*.test.js",
     "release": "NODE_ENV=production npm run build",
     "build": "./node_modules/.bin/webpack --progress --colors && node ./lib/release-script"
   }
