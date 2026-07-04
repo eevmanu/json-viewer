@@ -19,12 +19,16 @@ function bindResetButton() {
 
       var options = {};
       options.theme = defaults.theme;
+      options.optionsTheme = defaults.optionsTheme || "dark";
       options.addons = JSON.stringify(defaults.addons);
       options.structure = JSON.stringify(defaults.structure);
       options.style = defaults.style;
 
-      Storage.save(options);
-      document.location.reload();
+      Storage.save(options).then(function() {
+        document.location.reload();
+      }).catch(function(err) {
+        console.error("Failed to reset options", err);
+      });
 
     });
   }

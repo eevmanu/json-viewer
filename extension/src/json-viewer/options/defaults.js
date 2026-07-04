@@ -1,5 +1,6 @@
 module.exports = {
   theme: "default",
+  optionsTheme: "dark",
   addons: {
     prependHeader: true,
     maxJsonSize: 400,

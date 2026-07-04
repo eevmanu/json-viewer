@@ -6,7 +6,7 @@
     <script type="text/javascript" src="../assets/options.js"></script>
     <title>Options - JSON Viewer</title>
   </head>
-  <body>
+  <body class="dark-mode">
 
     <div class="container">
       <h1>
@@ -97,6 +97,10 @@
         <div class="action-bar">
           <div class="container">
             <a class="version" target="_blank"></a>
+            <select id="optionsTheme" name="optionsTheme">
+              <option value="dark">Options: Dark</option>
+              <option value="light">Options: Light</option>
+            </select>
             <button id="reset">Reset to defaults</button>
             <button id="save">Save</button>
           </div>
