@@ -44,14 +44,34 @@ Features:
 
 ### Or compile and load by yourself
 
-  1. It depends on node (version in `package.json` engines).
-  2. `npm install --global yarn`
-  2. `yarn install`
-  3. `yarn run build`
-  4. Open Chrome and go to: chrome://extensions/
-  5. Enable: "Developer mode"
-  6. Click: "Load unpacked extension"
-  7. Select: "build/json_viewer" directory.
+If you want to run the extension from source on a new machine, follow these steps to install dependencies, build, and load it into Google Chrome:
+
+1. **Prerequisites**: Ensure you have [Node.js](https://nodejs.org/) installed (Node.js 16+ or later is recommended).
+2. **Install Dependencies**:
+   You can use either `npm` or `yarn`. Standard `npm` comes pre-installed with Node.js:
+   ```bash
+   # Using npm (recommended):
+   npm install
+
+   # Or using yarn:
+   yarn install
+   ```
+3. **Build the Extension**:
+   ```bash
+   # Using npm (recommended):
+   npm run build
+
+   # Or using yarn:
+   yarn run build
+   ```
+   The build completes successfully, packaging the modernized Manifest V3 files inside the `build/json_viewer` directory.
+
+4. **Load the Extension into Chrome**:
+   - Open **Google Chrome** and navigate to: `chrome://extensions/`
+   - Enable **Developer mode** (the toggle switch in the upper-right corner).
+   - Click **Load unpacked** (the button in the upper-left corner).
+   - Select the built directory: `/path/to/json-viewer/build/json_viewer`.
+
 
 ## Try it on
 
